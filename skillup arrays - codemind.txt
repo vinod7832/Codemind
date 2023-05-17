@@ -1,0 +1,670 @@
+count numbers between even and odd vise versa:
+
+import java.util.Scanner;
+class array
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,x[],count=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=1;i<n-1;i++)
+        {
+            if(x[i]%2==0 || x[i]%2==1)
+            {
+                if((x[i+1]%2==0 && x[i-1]%2==1) || (x[i+1]%2==1 && x[i-1]%2==0))
+                    count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+count the odd numbers in between odd numbers:
+
+
+import java.util.Scanner;
+class array
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,x[],count=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=1;i<n-1;i++)
+        {
+            if(x[i]%2==1)
+            {
+                if((x[i+1]%2==1)&&(x[i-1]%2==1))
+                    count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+count even num in between even numbers:
+
+import java.util.Scanner;
+class array
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,x[],count=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=1;i<n-1;i++)
+        {
+            if(x[i]%2==0)
+            {
+                if((x[i+1]%2==0)&&(x[i-1]%2==0))
+                    count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+count odd num between even num:
+
+import java.util.Scanner;
+class array
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,x[],count=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=1;i<n-1;i++)
+        {
+            if(x[i]%2==1)
+            {
+                if((x[i+1]%2==0)&&(x[i-1]%2==0))
+                    count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+count even num between odd num:
+
+import java.util.Scanner;
+class array
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,x[],count=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=1;i<n-1;i++)
+        {
+            if(x[i]%2==0)
+            {
+                if((x[i-1]%2==1)&&(x[i+1]%2==1))
+                    count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+max num not between A and B:
+
+import java.util.Scanner;
+class array
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,x[],a,b,count=0,max=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        a=sc.nextInt();
+        b=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+            if((x[i]<a) || (x[i]>b))
+                count++;
+            if(x[i]>=max)
+                max=x[i];
+        }
+        if(count==0)
+            {
+                System.out.println("-1");
+            }
+        else
+            {
+                System.out.println(max);
+            }
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+elements smaller than avg
+
+import java.util.Scanner;
+class array
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,x[],count=0,sum=0,avg=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=0;i<n;i++)
+        {
+            sum=sum+x[i];
+        }
+        avg=sum/n;
+        for(i=0;i<n;i++)
+        {
+            if(x[i]<=avg)
+            {
+                count++;
+            }
+        }
+        System.out.println(count);
+            
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+binary array to decimal:
+
+import java.util.Scanner;
+class binary
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,x[],val=0,j=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=n-1;i>=0;i--)
+        {
+            val+=x[i]*Math.pow(2,j);
+            j++;
+        }
+        System.out.println(val);
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Binary array
+
+import java.util.Scanner;
+class binary
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,x[],count=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=0;i<n;i++)
+        {
+            if(x[i]!=0 && x[i]!=1)
+            {
+                count++;
+            }
+        }
+        if(count==0)
+        {
+            System.out.println("True");
+        }
+        else
+        {
+            System.out.println("False");
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------	
+Even array:
+
+import java.util.Scanner;
+class even
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,x[],count=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=0;i<n;i++)
+        {
+            if(x[i]%2!=0)
+            {
+                count++;
+            }
+        }
+        if(count==0)
+        {
+            System.out.println("True");
+        }
+        else
+        {
+            System.out.println("False");
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Strictly even:
+
+import java.util.Scanner;
+class even
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,x[],count=0,c=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=0;i<n;i++)
+        {
+            if(x[i]%2==0)
+            {
+                if(i%2==0)
+                    count++;
+                else
+                    c++;
+            }
+            
+        }
+        if(c==0)
+        {
+            System.out.println("True");
+        }
+        else
+        {
+            System.out.println("False");
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Strictlr odd:
+
+import java.util.Scanner;
+class even
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,x[],count=0,c=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=0;i<n;i++)
+        {
+            if(x[i]%2==1)
+            {
+                if(i%2==1)
+                    count++;
+                else
+                    c++;
+            }
+            
+        }
+        if(c==0)
+        {
+            System.out.println("True");
+        }
+        else
+        {
+            System.out.println("False");
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+minimum between A and B
+
+import java.util.Scanner;
+class sample
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,a,b,x[],count=0,min=10000;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        a=sc.nextInt();
+        b=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+            if(x[i]>=a && x[i]<b)
+            {
+                count++;
+                if(x[i]<min)
+                    min=x[i];
+            }
+        }
+        if(count==0)
+        {
+            System.out.println("-1");
+        }
+        else
+        {
+            System.out.println(min);
+        }
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+maxmimum between A and B
+
+import java.util.Scanner;
+class sample
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,a,b,x[],count=0,max=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        a=sc.nextInt();
+        b=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+            if(x[i]>=a && x[i]<=b)
+            {
+                count++;
+                if(x[i]>max)
+                    max=x[i];
+            }
+        }
+        if(count==0)
+        {
+            System.out.println("-1");
+        }
+        else
+        {
+            System.out.println(max);
+        }
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+sum of elements in between A and B
+
+import java.util.Scanner;
+class sample
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,a,b,x[],sum=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        a=sc.nextInt();
+        b=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+            if(x[i]>=a && x[i]<=b)
+            {
+                sum=sum+x[i];
+            }
+        }
+        System.out.println(sum);
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Elements in between A and B
+import java.util.Scanner;
+class sample
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,a,b,x[],count=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        a=sc.nextInt();
+        b=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+            if(x[i]>=a && x[i]<=b)
+            {
+                count++;
+                System.out.print(x[i]+" ");
+            }
+        }
+        if(count==0)
+        {
+            System.out.println("-1");
+        }
+
+        //System.out.println(sum);
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+minimum not bewteen A and B
+import java.util.Scanner;
+class sample
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,a,b,x[],min=1000,count=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        a=sc.nextInt();
+        b=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+            if(x[i]<a || x[i]>b)
+            {
+                count++;
+                //System.out.print(x[i]+" ");
+                if(x[i]<=min)
+                    min=x[i];
+            }
+        }
+        if(count==0)
+        {
+            System.out.println("-1");
+        }
+        else
+        {
+            System.out.println(min);
+        }
+
+        //System.out.println(sum);
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+sum of array elements upto k th array
+import java.util.Scanner;
+class sample
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,a,b,x[],sum=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        a=sc.nextInt();
+        for(i=0;i<a;i++)
+        {
+            sum=sum+x[i];
+        }
+        System.out.println(sum);
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+sum of array elements upto first even number
+
+import java.util.Scanner;
+class sample
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,a,b,x[],sum=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=0;i<n;i++)
+        {
+            if(x[i]%2==0)
+                break;
+                sum=sum+x[i];
+        }
+        System.out.println(sum);
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+sum of array elements upto first odd number
+
+import java.util.Scanner;
+class sample
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,a,b,x[],sum=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=0;i<n;i++)
+        {
+            if(x[i]%2!=0)
+                break;
+                sum=sum+x[i];
+        }
+        System.out.println(sum);
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+difference between sum of first half and second half of an array
+import java.util.Scanner;
+class sample
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,a=0,b=0,x[],diff=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=0;i<n/2;i++)
+        {
+           a=a+x[i];
+        }
+        for(i=n/2;i<n;i++)
+        {
+           b=b+x[i];
+        }
+        diff=Math.abs(b-a);
+        System.out.println(diff);
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+sum of first half and second half of an array
+import java.util.Scanner;
+class sample
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,n,a=0,b=0,x[],sum=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+        for(i=0;i<n/2;i++)
+        {
+           a=a+x[i];
+        }
+        for(i=n/2;i<n;i++)
+        {
+           b=b+x[i];
+        }
+        System.out.println(a);
+        System.out.println(b);
+        
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
